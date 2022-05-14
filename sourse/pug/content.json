@@ -1,0 +1,29 @@
+{
+	"nav":[
+		{"name":"Телефон", "url":"tel:+74957418510"},
+		{"name":"Телефон", "url":"tel:+74952900585"},
+		{"name":"Еmail", "url":"mailto:info@clage-russia.ru"}
+	],
+	"social":[
+		"fb","instagram","telegram"
+	],
+	"index":{
+		"head": {
+			"title": "Clage"
+		}
+	},
+	"items": [
+			{
+			"title": "заловок",
+			"text": "текст"
+		},
+			{
+			"title": "заловок 22",
+			"text": "текст"
+		},
+			{
+			"title": "заловок 33",
+			"text": "текст"
+			}
+		]
+	}
