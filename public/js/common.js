@@ -377,3 +377,25 @@ if (document.readyState !== 'loading') {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+let butlike = document.querySelectorAll(".butlike");
+let card = document.querySelectorAll(".card");
+for (let elem of butlike){
+	elem.onclick = function (){
+		let another = elem.parentElement.parentElement.parentElement.querySelector(".another");
+		let likes = elem.parentElement.parentElement.parentElement.querySelector(".likes");
+		let namevideo = elem.parentElement.parentElement.querySelector('.namevideo');
+		let ty = document.createElement('div');
+		let ty1 = document.createElement('p');
+		elem.parentElement.parentElement.parentElement.style.backgroundColor = "#20A272";
+		elem.parentElement.style.display = "none";
+		ty.className = "thanksBlock";
+		ty1.className ='thanks';
+		ty1.innerHTML = "СПАСИБО ЗА АКТИВНОСТЬ!";
+		ty.append(ty1);
+		another.append(ty);
+		namevideo.style.color = 'white';
+		likes.style.marginTop = '33px';
+		let likesimg = likes.firstChild
+		likesimg.src ="img/like2.png"
+	}
+}
