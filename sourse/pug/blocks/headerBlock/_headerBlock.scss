@@ -5,6 +5,8 @@
 	min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: url(../img);
 	// background-color: #000000;
+	padding-top: 1px;
+	margin-top: 1px;
 
 	h1 {
 		margin-bottom: 1px;
@@ -50,6 +52,123 @@
 
 	@include media-breakpoint-down(xs) {}
 
+}
+.card {
+	.container {
+		padding:0;
+		margin: -29px 0 90px 0;
+		box-shadow: 0  8px 16px 0 #5057690D;
+		border-radius: 8px;
+	}
+	.video{
+		position: relative;
+		.watches{
+			background-color: black;
+			border-radius: 2px;
+			color: white;
+			width: 50px;
+			height: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			margin-right: 59px;
+			position: absolute;
+			left: 20px;
+			top : 116px;
+			img{
+				width: 20px;
+				height: 12px;
+			}
+			span{
+				font-size: 13px;
+				width: 14px;
+				height: 16px;
+				font-weight: 700;
+			}
+
+		}
+		.plays{
+			position: absolute;
+			top: 48px;
+			left: 106px;
+			border-radius: 50%;
+			border:1px solid green;
+			width: 50px;
+			height: 50px;
+			img{
+				margin-left: rem(17.44);
+				margin-top: rem(13.44);
+			}
+		}
+		.videolikes{
+			position: absolute;
+			top: 116px;
+			left: 212px;
+			background-color: black;
+			color: white;
+			border-radius: 2px;
+			width: 37px;
+			height: 20px;
+			font-weight: 700;
+			font-size: 13px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			line-height: calc(16/13);
+		}
+	}
+	.video:hover{
+		.plays{
+			background-color: #20A272;
+		}
+	}
+}
+.another{
+	margin-left: 21px;
+	margin-right: 22px;
+	margin-top: 13px;
+	.namevideo{
+		line-height: calc(19/16);
+		font-size: 16px;
+		font-weight: 400;
+		width: 222px;
+		height: 39px;
+	}
+	.likes{
+		margin-top: 16px;
+		width: rem(74);
+		height: rem(40);
+		.span{
+			font-weight: 700;
+			font-size: 26px;
+			line-height: calc(31/26);
+			margin-top: -32px;
+			margin-left: 122px;
+			width: 24px;
+			height: 32px;
+			text-align: center;
+		}
+		img{
+			margin-left: 75px;
+		}
+	}
+	.but{
+		margin-top: 42px;
+		margin-bottom: 31px;
+		button{
+			border: 1px solid green;
+			width: 223px;
+			height: 40px;
+			background-color: white;
+			font-size: 13px;
+			line-height: calc(16/13);
+			letter-spacing: 0.1em;
+		}
+		button:hover{
+			background-color: #20A272;
+			color: white;
+		}
+	}
 }
 
 // end.headerBlock

@@ -1,8 +1,41 @@
 mixin headerBlock()
-	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-			.row
-						
-	// end headerBlock
+    // start headerBlock
+    +b.headerBlock.section#headerBlock&attributes(attributes)
+        .container
+            +b.section-title.text-center
+            .row
+                .col-3
+                    +CardBlock("../img/Rectangle180.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",13)
+                .col-3
+                    +CardBlock("../img/Rectangle280.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",42)
+                .col-3
+                    +CardBlock("../img/Rectangle380.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",76)
+                .col-3
+                    +CardBlock("../img/Rectangle480.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",88)
+                .col-3
+                    +CardBlock("../img/Rectangle580.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",98)
+                .col-3
+                    +CardBlock("../img/Rectangle680.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",54)
+                .col-3
+                    +CardBlock("../img/Rectangle780.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",27)
+                .col-3
+                    +CardBlock("../img/Rectangle880.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",11)
+mixin CardBlock(img,txt,likes)
+    +b.card
+        .container
+            .video
+                +e(src= img)
+                .watches
+                    img(src ="../img/Watches.png" )
+                    span 45
+                .plays
+                    img(src= "../img/Playbutton1.png")
+                .videolikes
+                    span 4:28
+            .another
+                .namevideo Leon Thomas - The Creator Has a Master Plan (Official Audio)
+                .likes
+                    img(src= "img/like1.png")
+                    .span= likes
+                .but
+                    button ПРОГОЛОСОВАТЬ
