@@ -7,6 +7,7 @@
 	// background-color: #000000;
 	padding-top: 1px;
 	margin-top: 1px;
+	padding-bottom: 157px;
 
 	h1 {
 		margin-bottom: 1px;
@@ -53,137 +54,239 @@
 	@include media-breakpoint-down(xs) {}
 
 }
-.card {
-	.container {
-		padding:0;
-		margin: -29px 0 58px 0;
-		box-shadow: 0  rem(8) rem(16) 0 #5057690D;
-		border-radius: rem(8);
-		height: rem(366);
-	}
-	.video{
-		position: relative;
-		.watches{
-			background-color: black;
-			border-radius: rem(2);
-			color: white;
-			width: rem(50);
-			height: rem(20);
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-			margin-right: rem(59);
-			position: absolute;
-			left: rem(20);
-			top : rem(116);
-			img{
-				width: rem(20);
-				height: rem(12);
-			}
-			span{
-				font-size: rem(13);
-				width: rem(14);
-				height: rem(16);
-				font-weight: 700;
-			}
-
-		}
-		.plays{
-			position: absolute;
-			top: rem(48);
-			left: rem(106);
-			border-radius: 50%;
-			border:rem(1) solid white;
-			width: rem(50);
-			height: rem(50);
-			img{
-				margin-left: rem(17.44);
-				margin-top: rem(13.44);
-			}
-		}
-		.videolikes{
-			position: absolute;
-			top: rem(116);
-			left: rem(212);
-			background-color: black;
-			color: white;
-			border-radius: rem(2);
-			width: rem(37);
-			height: rem(20);
-			font-weight: 700;
-			font-size: rem(13);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			line-height: calc(16/13);
-		}
-	}
-	.video:hover{
-		.plays{
-			background-color: #20A272;
-			border: rem(1) solid #20A272;
-		}
+.section-title{
+	h1{
+		font-weight: 400;
+		font-size: rem(26);
+		padding-top: rem(99);
+		letter-spacing: 0.1em;
+		padding-right: rem(3);
+		margin-bottom: rem(53);
 	}
 }
-.another{
-	margin-left: rem(21);
-	margin-right: rem(22);
-	margin-top: rem(13);
-	.namevideo{
-		line-height: calc(19/16);
+.section-cards{
+	margin-bottom: 31px;
+}
+.card1 {
+	margin-bottom: rem(29);
+	&__box {
+		padding: 0;
+		box-shadow: 0 rem(8) rem(16) 0 #5057690D;
+		border-radius: rem(8);
+		height: rem(366);
+		margin-bottom: 1px;
+	}
+
+	&__video {
+		position: relative;
+		margin-bottom: 11px;
+
+		&:hover {
+			.card1__plays {
+				background-color: #20A272;
+				border: rem(1) solid #20A272;
+			}
+		}
+	}
+
+	&__video-img {
+	}
+
+	&__watches {
+		background-color: black;
+		border-radius: rem(2);
+		color: white;
+		width: auto;
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: absolute;
+		left: rem(20);
+		top: rem(116);
+
+		img {
+			width: rem(20);
+			height: rem(12);
+			margin-left: rem(4);
+		}
+
+		span {
+			font-size: rem(13);
+			width: auto;
+			height: auto;
+			font-weight: 700;
+			margin-left: 5px;
+			padding: rem(1) rem(6) 0 0;
+		}
+	}
+
+	&__plays {
+		position: absolute;
+		top: rem(48);
+		left: rem(106);
+		border-radius: 50%;
+		border: rem(1) solid white;
+		width: rem(50);
+		height: rem(50);
+
+		img {
+			padding-left: 18px;
+			padding-top: 13px;
+		}
+	}
+	&__videolikes {
+		position: absolute;
+		top: rem(116);
+		left: rem(212);
+		background-color: black;
+		color: white;
+		border-radius: rem(2);
+		width: rem(37);
+		height: rem(20);
+		font-weight: 700;
+		font-size: rem(13);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: calc(16 / 13);
+	}
+
+	&__another {
+		margin-left: rem(20);
+	}
+
+	&__namevideo {
+		line-height: calc(19 / 16);
 		font-size: rem(16);
 		font-weight: 400;
 		width: rem(222);
 		height: rem(39);
+		margin-bottom: rem(19);
+
 	}
-	.likes{
-		margin-top: rem(16);
-		margin-left: rem(1);
-		width: rem(74);
-		height: rem(40);
-		.span{
+
+	&__likes {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: rem(40);
+		padding-right: 1px;
+		.fingerAmount{
+			display: block;
 			font-weight: 700;
 			font-size: rem(26);
-			line-height: calc(31/26);
-			margin-top: rem(-32);
-			margin-left: rem(122);
-			width: rem(24);
-			height: rem(32);
-			text-align: center;
+			line-height: calc(31 / 26);
+			padding-top: 5px;
+			padding-right: 14px;
+			padding-left: 11px;
 		}
-		img{
-			margin-left: rem(75);
+		.finger{
+			background-image: url("../img/like1.png");
+			width: 36px;
+			height: 40px;
 		}
 	}
-	.but{
-		margin-top: rem(42);
-		button{
-			border: rem(1) solid green;
-			width: rem(223);
-			height: rem(40);
-			background-color: white;
-			font-size: rem(13);
-			line-height: calc(16/13);
-			letter-spacing: 0.1em;
+
+	&__btn {
+		@extend .btn;
+		@extend .btn-outline-primary;
+		font-size: rem(13);
+		line-height: calc(16/13);
+		letter-spacing: 0.1em;
+		&--vote{
+			color: black;
+			padding: 11px 44px;
 		}
-		button:hover{
+		&--thanks{
+			display: none;
+			color: white;
+		}
+		&:hover {
 			background-color: #20A272;
 			color: white;
 		}
 	}
-	.thanksBlock{
-		margin-top: rem(38);
-		.thanks{
-			font-size: rem(13);
-			line-height: calc(16/13);
-			letter-spacing: 0.1em;
-			height: rem(40);
-			width: rem(223);
-			margin-left: rem(6);
+
+	&.active {
+		.card1__box {
+			background-color: #20A272;
+		}
+		.card1__namevideo{
 			color: white;
+			margin-bottom: 35px;
 		}
 
+		.card1__likes{
+			margin-bottom: 30px;
+			.finger{
+		background-image: url("../img/like2.png");
+			}
+		}
+		.card1__btn{
+			&--vote{
+				display: none;
+			}
+			&--thanks{
+				display: inline-block;
+				padding-left: 6px;
+				cursor: default;
+			}
+		}
 	}
 }
-
-// end.headerBlock
+.navbtns{
+	&__arrowbtn{
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		//box-shadow:0 8px 16px 0, #50576940;
+	}
+	&__arrowbtn--lft{
+		background-color: grey;
+		img{
+			padding-left: 17px;
+			padding-top: 19px;
+		}
+	}
+	&__arrowbtn--rght{
+		background-color: #20A272 ;
+		img{
+			padding-left: 18px;
+			padding-top: 19px;
+		}
+	}
+	&__ArrowBtnBox{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		span{
+			padding:6px 13px 0 13px;
+			letter-spacing: 0.1em;
+		}
+	}
+	&__NumBtnBox{
+		.navbtns__btn{
+			border-radius: 50%;
+			width: 48px;
+			height: 48px;
+			border-color: white;
+			margin-right: 5px;
+			font-size: 21px;
+			line-height: calc(25/21);
+		}
+		.navbtns__btn.active{
+			border: 1px solid #20A272;
+			background-color: #20A272;
+			color: white;
+		}
+		.navbtns__btn.nextActive{
+			border: 1px solid #20A272;
+			background-color: white;
+		}
+		.navbtns__btn.noActive{
+			border: 1px solid #CCCCCC;
+			background-color: white;
+		}
+	}
+}
