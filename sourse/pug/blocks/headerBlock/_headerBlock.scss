@@ -88,8 +88,15 @@
 			}
 		}
 	}
-
-	&__video-img {
+	&__contentBlock{
+		width: 263px;
+		height: 146px;
+	}
+	&__videoImg{
+		width: 100%;
+		object-fit: cover;
+		background-size: cover;
+		border-radius: 8px 8px 0 0;
 	}
 
 	&__watches {
@@ -182,7 +189,7 @@
 			padding-left: 11px;
 		}
 		.finger{
-			background-image: url("../img/like1.png");
+			background-image: url("../img/svg/like.svg");
 			width: 36px;
 			height: 40px;
 		}
@@ -220,7 +227,7 @@
 		.card1__likes{
 			margin-bottom: 30px;
 			.finger{
-		background-image: url("../img/like2.png");
+		background-image: url("../img/svg/like1.svg");
 			}
 		}
 		.card1__btn{

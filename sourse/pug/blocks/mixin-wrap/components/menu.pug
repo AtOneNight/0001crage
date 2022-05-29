@@ -1,8 +1,8 @@
-
+-var arrayFooter = ["Правила участия в конкурсе","Data privacy","Use of cookies","Imprint"]
 mixin mnu()
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		each link in nav
-			li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
+		each link in arrayFooter
+			li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.arrayFooter
 			if link.subnav
 				li.menu-item.menu-item-has-children
 					a(href="#" itemprop="url") О нас

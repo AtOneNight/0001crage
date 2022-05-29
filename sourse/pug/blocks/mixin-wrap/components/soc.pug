@@ -3,14 +3,12 @@ mixin item-sos(icon, a='#')
 		if block
 			block
 		else
-			+icon(icon)
+			img(src=`img/svg/soc-${icon}.svg`	)
 //- social buttons
 mixin soc()
 	+b.soc
-		if block
-			block
-		else
-			each soc in social
-				+item-sos(soc)
-
-//- /social buttons 
+		+item-sos('fb')
+		+item-sos('vk')
+		+item-sos('inst')
+		+item-sos('yt')
+//- /social buttons

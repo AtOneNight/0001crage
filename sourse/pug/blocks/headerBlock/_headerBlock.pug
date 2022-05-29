@@ -5,26 +5,18 @@ mixin headerBlock()
             .section-title.text-center
                 h1 КОНКУРС НА ЛУЧШИЙ ВИДЕОБЗОР УЗЛА ВВОДА
             .row.section-cards
-                .col-3
-                    +CardBlock1("../img/Rectangle180.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",13)
-                .col-3
-                    +CardBlock1("../img/Rectangle280.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",42)
-                .col-3
-                    +CardBlock1("../img/Rectangle380.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",76)
-                .col-3
-                    +CardBlock1("../img/Rectangle480.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",88)
-                .col-3
-                    +CardBlock1("../img/Rectangle580.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",98)
-                .col-3
-                    +CardBlock1("../img/Rectangle680.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",54)
-                .col-3
-                    +CardBlock1("../img/Rectangle780.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",27)
-                .col-3
-                    +CardBlock1("../img/Rectangle880.png","Leon Thomas - The Creator Has a Master Plan (Official Audio)",11)
+                +CardBlock1(1,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",13)
+                +CardBlock1(2,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",42)
+                +CardBlock1(3,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",76)
+                +CardBlock1(4,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",88)
+                +CardBlock1(5,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",98)
+                +CardBlock1(6,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",54)
+                +CardBlock1(7,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",27)
+                +CardBlock1(8,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",11)
             +b.navbtns.row.justify-content-between
                 +e.ArrowBtnBox.col-auto
                     +e.arrowbtn--lft
-                        img(src="../img/arrowlft.png")
+                        img(src="../img/svg/arrowLeft.svg")
                     span НАЗАД
                 +e.NumBtnBox.col-auto
                     +e.btn.active(type="button") 1
@@ -33,24 +25,26 @@ mixin headerBlock()
                 +e.ArrowBtnBox.col-auto
                     span ДАЛЕЕ
                     +e.arrowbtn--rght
-                        img(src="../img/arrowrght.png")
+                        img(src="../img/svg/arrowRight.svg")
 
-mixin CardBlock1(img,txt,likes)
-    +b.card1
-        +e.box
-            +e.video
-                +e.videoImg(src= img)
-                +e.watches
-                    img(src ="../img/Watches.png" )
-                    span 45
-                +e.plays
-                    img(src= "../img/Playbutton1.png")
-                +e.videolikes
-                    span 4:28
-            +e.another
-                +e.namevideo Leon Thomas - The Creator Has a Master Plan (Official Audio)
-                +e.likes
-                    .finger
-                    span.fingerAmount= likes
-                +e.btn--vote(type="button") ПРОГОЛОСОВАТЬ
-                +e.btn--thanks(type="button") СПАСИБО ЗА АКТИВНОСТЬ!
+mixin CardBlock1(imgNum,txt,likes)
+    .col-3
+        +b.card1
+            +e.box
+                +e.video
+                    +e.__contentBlock
+                         +e.videoImg(src= `img/@2x/CardBlock1-${imgNum}.png`)
+                    +e.watches
+                        img(src ="../img/svg/watches.svg" )
+                        span 45
+                    +e.plays
+                        img(src= "../img/svg/playButton.svg")
+                    +e.videolikes
+                        span 4:28
+                +e.another
+                    +e.namevideo Leon Thomas - The Creator Has a Master Plan (Official Audio)
+                    +e.likes
+                        .finger
+                        span.fingerAmount= likes
+                    +e.btn--vote(type="button") ПРОГОЛОСОВАТЬ
+                    +e.btn--thanks(type="button") СПАСИБО ЗА АКТИВНОСТЬ!

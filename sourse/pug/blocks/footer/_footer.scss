@@ -42,8 +42,11 @@
 @include media-breakpoint-down(xs) {}
 }
 .footer{
+	&__row{
+		padding-top: 2px;
+		margin-bottom: 33px;
+	}
 	&__logo{
-
 		img {
 			padding-bottom: 41px;
 		}
@@ -51,6 +54,8 @@
 	&__title{
 		letter-spacing: 0.1em;
 		margin-bottom: 19px;
+		font-size: 16px;
+		line-height: calc(18/16);
 		span{
 			letter-spacing: 0;
 		}
@@ -65,7 +70,7 @@
 		letter-spacing: 0;
 		span{
 			display: inline-block;
-			margin-bottom: 19px;
+			margin-bottom: 17px;
 		}
 	}
 	&__linksBox {
@@ -82,6 +87,16 @@
 		color: grey;
 		font-size: 13px;
 		line-height: calc(14/13);
-		padding-bottom: 21px;
+		padding-bottom: 23px;
+		padding-top: 4px;
 	}
+	.soc{
+
+	}
+	&__copyright{
+		font-size: 13px;
+		line-height: calc(18/13);
+		color: #7B8386;
+	}
+
 }

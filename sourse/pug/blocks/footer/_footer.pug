@@ -2,7 +2,7 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			+e.logo(href="/")
-				img(src="../img/CLAGE-Logo-4c-schwarz 1.png" loading="lazy" alt='html')
+				img(src="../img/svg/CLAGE-Logo.svg" loading="lazy" alt='html')
 			+e.row.row
 				+e.mainAdress.col-3
 					+e.title CLAGE #[span GmbH]
@@ -24,4 +24,16 @@ mixin footer()
 						a(href="tel:+74952900585") +7 (495) 290-05-85
 						a(href="mailto:info@clage-russia.ru") info@clage-russia.ru
 					+e.link(href='clage-russia.ru' target="_blank") clage-russia.ru
-				+e.col
+				+e.socials.col-3
+					+e.title ПРИСОЕДНАЙСЯ
+					+soc()
+				+e.information.col-3
+					+e.title ИНФОРМАЦИЯ
+					+mnu()
+			+e.copyright
+				| Copyright ©
+				|
+				span.set-curr-year-js 2021
+				|
+				| CLAGE GmbH. All rights reserved.
+
