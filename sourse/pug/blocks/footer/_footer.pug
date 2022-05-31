@@ -4,7 +4,7 @@ mixin footer()
 			+e.logo(href="/")
 				img(src="../img/svg/CLAGE-Logo.svg" loading="lazy" alt='html')
 			+e.row.row
-				+e.mainAdress.col-3
+				+e.mainAdress.col-6.col-lg-3
 					+e.title CLAGE #[span GmbH]
 					+e.contentAdress
 						span Pirolweg 1-5, 21337 Lüneburg, Germany
@@ -12,7 +12,7 @@ mixin footer()
 							a(href="tel:+49413189010") +49 4131 89010
 							a(href="mailto:info@clage.de") info@clage.de
 						+e.link(href='www.clage.com' target="_blank") www.clage.com
-				+e.localAdress.col-3
+				+e.localAdress.col-6.col-lg-3
 					+e.title.mb-0 CLAGE-RUSSIA
 					+e.contentAdress
 						+e.gray
@@ -24,12 +24,21 @@ mixin footer()
 						a(href="tel:+74952900585") +7 (495) 290-05-85
 						a(href="mailto:info@clage-russia.ru") info@clage-russia.ru
 					+e.link(href='clage-russia.ru' target="_blank") clage-russia.ru
-				+e.socials.col-3
+				+e.socials.col-6.col-lg-3
 					+e.title ПРИСОЕДНАЙСЯ
 					+soc()
-				+e.information.col-3
+				+e.information.col-6.col-lg-3
 					+e.title ИНФОРМАЦИЯ
-					+mnu()
+					+e.menuContainer
+						ul.menu
+							li.menu-item
+								a(href="#") Правила участия в конкурсе
+							li.menu-item
+								a(href="#") Data privacy
+							li.menu-item
+								a(href="#") Use of cookies
+							li.menu-item
+								a(href="#") Imprint
 			+e.copyright
 				| Copyright ©
 				|

@@ -1,5 +1,11 @@
 // start .headerBlock
 .headerBlock {
+	&__row{
+		margin-bottom: 54px;
+		--bs-gutter-y: #{rem(30)};
+		--row-bg: $white;
+		background-color: var(--row-bg);
+	}
 	margin-bottom: 1px;
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
@@ -7,7 +13,7 @@
 	// background-color: #000000;
 	padding-top: 1px;
 	margin-top: 1px;
-	padding-bottom: 157px;
+	padding-bottom: 150px;
 
 	h1 {
 		margin-bottom: 1px;
@@ -16,42 +22,6 @@
 	h2 {
 		margin-bottom: 1px;
 	}
-
-	@include media-breakpoint-up(xl) {}
-
-	@include media-breakpoint-up(lg) {}
-
-	@include media-breakpoint-up(md) {}
-
-	@include media-breakpoint-up(sm) {}
-
-	@include media-breakpoint-up(xs) {}
-
-	//
-	@include media-breakpoint-between(md, xl) {}
-
-
-	//
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
-
-	//
-	@include media-breakpoint-down(xl) {}
-
-	@include media-breakpoint-down(lg) {}
-
-	@include media-breakpoint-down(md) {}
-
-	@include media-breakpoint-down(sm) {}
-
-	@include media-breakpoint-down(xs) {}
 
 }
 .section-title{
@@ -64,45 +34,50 @@
 		margin-bottom: rem(53);
 	}
 }
-.section-cards{
-	margin-bottom: 31px;
-}
+
 .card1 {
-	margin-bottom: rem(29);
+	--border-default: 1px solid ;
 	&__box {
+		background-color: var(--card-bg, $white);
 		padding: 0;
 		box-shadow: 0 rem(8) rem(16) 0 #5057690D;
 		border-radius: rem(8);
-		height: rem(366);
-		margin-bottom: 1px;
 	}
 
 	&__video {
+		display: block;
+		z-index: 1;
 		position: relative;
-		margin-bottom: 11px;
+		height: 0;
+		padding-top: calc(146 / 263 * 100%);
+		border-radius: 8px 8px 0 0;
+		overflow: hidden;
 
 		&:hover {
-			.card1__plays {
-				background-color: #20A272;
-				border: rem(1) solid #20A272;
-			}
+			--play-scale:1.1;
+			--background-color-green: #{$green};
+			--border-defalt-green:1 px solid #{$green};
 		}
 	}
-	&__contentBlock{
-		width: 263px;
-		height: 146px;
-	}
-	&__videoImg{
-		width: 100%;
-		object-fit: cover;
-		background-size: cover;
-		border-radius: 8px 8px 0 0;
+	&__img-box {
+		display: block;
+		img {
+			transform: scale(var(--play-scale,1));
+			top: 0;
+			left: 0;
+			transition: all .3s ease-in-out;
+			position: absolute;
+			z-index: -1;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
 	}
 
 	&__watches {
-		background-color: black;
+		background-color: $black;
 		border-radius: rem(2);
-		color: white;
+		color: $white;
 		width: auto;
 		height: auto;
 		display: flex;
@@ -110,7 +85,7 @@
 		justify-content: space-between;
 		position: absolute;
 		left: rem(20);
-		top: rem(116);
+		bottom: 10px;
 
 		img {
 			width: rem(20);
@@ -129,11 +104,14 @@
 	}
 
 	&__plays {
+		display: block;
 		position: absolute;
-		top: rem(48);
-		left: rem(106);
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%) scale(var(--play-scale,1));
+		background-color: var(--background-color-green, transparent) ;
 		border-radius: 50%;
-		border: rem(1) solid white;
+		border: var(--border-defalt-green ,1px solid white );
 		width: rem(50);
 		height: rem(50);
 
@@ -142,12 +120,13 @@
 			padding-top: 13px;
 		}
 	}
-	&__videolikes {
+	&__videoTime {
 		position: absolute;
-		top: rem(116);
-		left: rem(212);
-		background-color: black;
-		color: white;
+		bottom: 10px;
+		//left: rem(212);
+		right: 14px;
+		background-color: $black;
+		color: $white;
 		border-radius: rem(2);
 		width: rem(37);
 		height: rem(20);
@@ -160,16 +139,14 @@
 	}
 
 	&__another {
-		margin-left: rem(20);
+		padding: 10px 20px 30px 20px;
 	}
 
 	&__namevideo {
-		line-height: calc(19 / 16);
+		line-height: 1.3;
 		font-size: rem(16);
 		font-weight: 400;
-		width: rem(222);
-		height: rem(39);
-		margin-bottom: rem(19);
+		margin-bottom:var(--margin-for-namevideo, 19px);
 
 	}
 
@@ -177,8 +154,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-bottom: rem(40);
-		padding-right: 1px;
+		margin-bottom: var(--margin-for-likes,39px);
+		padding-left: 21px;
 		.fingerAmount{
 			display: block;
 			font-weight: 700;
@@ -189,7 +166,7 @@
 			padding-left: 11px;
 		}
 		.finger{
-			background-image: url("../img/svg/like.svg");
+			background-image: var(--image-finger, url("../img/svg/like.svg"));
 			width: 36px;
 			height: 40px;
 		}
@@ -199,101 +176,113 @@
 		@extend .btn;
 		@extend .btn-outline-primary;
 		font-size: rem(13);
-		line-height: calc(16/13);
+		line-height: calc(15.6/13);
 		letter-spacing: 0.1em;
+		display: block;
+		width: 100%;
+		background-color: var(--background-color-green , $white);
 		&--vote{
-			color: black;
+			color: $black;
 			padding: 11px 44px;
+			display: var(--switch-to-none, inline-block);
+			:hover{
+				--background-color-green: #{$green};
+				--letter-collor: $white;
+				color: #0a2b1d;
+			}
 		}
 		&--thanks{
-			display: none;
-			color: white;
-		}
-		&:hover {
-			background-color: #20A272;
-			color: white;
+			margin: 0;
+			padding: 12px 0 ;
+			display:var(--switch-to-inline ,none);
+			color: $black !important;
+			background-color: var(--background-color-green);
+			cursor: var(--cursor,pointer) !important;
 		}
 	}
-
 	&.active {
-		.card1__box {
-			background-color: #20A272;
-		}
-		.card1__namevideo{
-			color: white;
-			margin-bottom: 35px;
-		}
+		--card-bg: #{$green};
+		--image-finger: url("../img/svg/like1.svg");
+		--switch-to-none: none;
+		--switch-to-inline:inline-block;
+		--default: default;
+		--cursor: default;
+		--margin-for-likes: 23px;
+		--margin-for-namevideo:34px;
 
-		.card1__likes{
-			margin-bottom: 30px;
-			.finger{
-		background-image: url("../img/svg/like1.svg");
-			}
-		}
-		.card1__btn{
-			&--vote{
-				display: none;
-			}
-			&--thanks{
-				display: inline-block;
-				padding-left: 6px;
-				cursor: default;
-			}
-		}
 	}
 }
 .navbtns{
+	align-items: center;
+	--border-default: 1px solid #{$green} ;
 	&__arrowbtn{
+		//box-shadow:0 8px 16px 0, #50576940;
 		border-radius: 50%;
 		width: 50px;
 		height: 50px;
-		//box-shadow:0 8px 16px 0, #50576940;
-	}
-	&__arrowbtn--lft{
-		background-color: grey;
-		img{
-			padding-left: 17px;
-			padding-top: 19px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&--lft{
+			background-color: $gray-610;
+		}
+		&--rght{
+			background-color: $green ;
+
 		}
 	}
-	&__arrowbtn--rght{
-		background-color: #20A272 ;
-		img{
-			padding-left: 18px;
-			padding-top: 19px;
+	&__txt-btn{
+		&:first-child{
+			padding-left: 0;
 		}
-	}
-	&__ArrowBtnBox{
+		&:last-child{
+			padding-right: 0;
+		}
+		@extend .btn;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		span{
 			padding:6px 13px 0 13px;
 			letter-spacing: 0.1em;
+			color: $black;
+		}
+		&__next{
+			color: red;
 		}
 	}
-	&__NumBtnBox{
-		.navbtns__btn{
-			border-radius: 50%;
-			width: 48px;
-			height: 48px;
-			border-color: white;
-			margin-right: 5px;
-			font-size: 21px;
-			line-height: calc(25/21);
+
+	&__btn{
+		@extend .btn;
+		border-radius: rem(24);
+		min-width: 48px;
+		height: 48px;
+		padding:0 10px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 5px;
+		&:last-child{
+			margin-right: 0;
 		}
-		.navbtns__btn.active{
-			border: 1px solid #20A272;
-			background-color: #20A272;
-			color: white;
+		font-size: rem(21);
+		line-height: calc(25/21);
+
+		border: var(--border-default) #CCCCCC;
+		background-color: $white;
+		&:hover{
+			border:var(--border-default);
 		}
-		.navbtns__btn.nextActive{
-			border: 1px solid #20A272;
-			background-color: white;
-		}
-		.navbtns__btn.noActive{
-			border: 1px solid #CCCCCC;
-			background-color: white;
+
+		&.current{
+			border: var(--border-default);
+			background-color: $green;
+			color: $white;
 		}
 	}
+	&__{
+
+	}
+	&__{}
+	&__{}
 }

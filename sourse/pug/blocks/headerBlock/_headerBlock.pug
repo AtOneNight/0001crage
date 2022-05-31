@@ -4,7 +4,7 @@ mixin headerBlock()
         .container
             .section-title.text-center
                 h1 КОНКУРС НА ЛУЧШИЙ ВИДЕОБЗОР УЗЛА ВВОДА
-            .row.section-cards
+            +e.row.row
                 +CardBlock1(1,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",13)
                 +CardBlock1(2,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",42)
                 +CardBlock1(3,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",76)
@@ -14,32 +14,34 @@ mixin headerBlock()
                 +CardBlock1(7,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",27)
                 +CardBlock1(8,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",11)
             +b.navbtns.row.justify-content-between
-                +e.ArrowBtnBox.col-auto
-                    +e.arrowbtn--lft
-                        img(src="../img/svg/arrowLeft.svg")
-                    span НАЗАД
-                +e.NumBtnBox.col-auto
-                    +e.btn.active(type="button") 1
-                    +e.btn.nextActive(type="button") 2
-                    +e.btn.noActive(type="button") 3
-                +e.ArrowBtnBox.col-auto
-                    span ДАЛЕЕ
-                    +e.arrowbtn--rght
-                        img(src="../img/svg/arrowRight.svg")
+                .col-auto
+                    +e.txt-btn--prev(href="#")
+                        +e.arrowbtn--lft
+                            img(src="../img/svg/arrowLeft.svg")
+                        span НАЗАД
+                .col-auto
+                    +e.btn.current(href="#") 1
+                    +e.btn(href="#") 2
+                    +e.btn(href="#") 3
+                .col-auto
+                    +e.txt-btn--next(href="#")
+                        span ДАЛЕЕ
+                        +e.arrowbtn--rght
+                            img(src="../img/svg/arrowRight.svg")
 
 mixin CardBlock1(imgNum,txt,likes)
-    .col-3
+    .col-xl-3.col-md-6
         +b.card1
             +e.box
-                +e.video
-                    +e.__contentBlock
-                         +e.videoImg(src= `img/@2x/CardBlock1-${imgNum}.png`)
+                +e.video(href="#")
+                    +e.img-box
+                         img(src= `img/@2x/CardBlock1-${imgNum}.png`)
                     +e.watches
                         img(src ="../img/svg/watches.svg" )
                         span 45
                     +e.plays
                         img(src= "../img/svg/playButton.svg")
-                    +e.videolikes
+                    +e.videoTime
                         span 4:28
                 +e.another
                     +e.namevideo Leon Thomas - The Creator Has a Master Plan (Official Audio)

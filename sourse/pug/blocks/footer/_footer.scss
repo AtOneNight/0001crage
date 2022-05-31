@@ -1,9 +1,14 @@
 .footer {
-		
 	margin-top: auto;
 
-// 
-@include media-breakpoint-up(xl) {}
+	// mobile first
+	//background-color: transparent;
+	//@include media-breakpoint-up(sm){
+	//	background-color: green;
+	//}
+	//@include media-breakpoint-up(xl) {
+	//	background-color: red;
+	//}
 
 @include media-breakpoint-up(lg) {}
 
@@ -44,16 +49,16 @@
 .footer{
 	&__row{
 		padding-top: 2px;
-		margin-bottom: 33px;
+		margin-bottom: 36px;
 	}
 	&__logo{
 		img {
-			padding-bottom: 41px;
+			padding-bottom: 40px;
 		}
 	}
 	&__title{
 		letter-spacing: 0.1em;
-		margin-bottom: 19px;
+		margin-bottom: 18px;
 		font-size: 16px;
 		line-height: calc(18/16);
 		span{
@@ -75,7 +80,7 @@
 	}
 	&__linksBox {
 		letter-spacing: 0;
-		margin-bottom: 17px;
+		margin-bottom: 15px;
 		font-size: 16px;
 		line-height: calc(18/16);
 		a{
@@ -90,13 +95,30 @@
 		padding-bottom: 23px;
 		padding-top: 4px;
 	}
-	.soc{
-
-	}
 	&__copyright{
 		font-size: 13px;
 		line-height: calc(18/13);
 		color: #7B8386;
 	}
+	&__menuContainer{
+		.menu{
+			list-style: none;
+			.menu-item{
+				font-size: 16px;
+				line-height: calc(18/16);
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.soc{
+		&__item{
+			width: rem(48);
+			img{
+				height: auto;
+				width: 100%;
+			}
 
+		}
+	}
 }
+

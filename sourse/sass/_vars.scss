@@ -43,10 +43,11 @@ $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
+$gray-610: #7B8386;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black: #000 !default;
+$black: #333333;
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -277,7 +278,7 @@ $grid-breakpoints: (xs: 0,
 $container-max-widths: (sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1170px);
+  xl: 1172px);
 
 // scss-docs-end container-max-widths
 
