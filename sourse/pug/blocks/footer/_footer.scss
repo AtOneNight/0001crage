@@ -1,5 +1,25 @@
 .footer {
-	//margin-top: auto;
+	margin-top: auto;
+
+	// mobile first
+	//background-color: transparent;
+	//@include media-breakpoint-up(sm){
+	//	background-color: green;
+	//}
+	@include media-breakpoint-down(xl) {
+		.footer__row {
+			--bs-gutter-y: 50px;
+		}
+		.footer__linksBox{
+			margin-bottom: 20px;
+		}
+		.footer__contentAdress{
+			span{
+				margin-bottom: 40px;
+			}
+		}
+
+	}
 
 @include media-breakpoint-up(lg) {}
 
@@ -27,32 +47,22 @@
 
 
 // 
-@include media-breakpoint-down(xl) {
-	.footer__contentAdress{
-		span{
-			margin-bottom: rem(25);
-		}
-	}
-}
+@include media-breakpoint-down(xl) {}
 
-@include media-breakpoint-down(lg) {
-	.footer__row{
-		--bs-gutter-y: #{rem(40)};
-	}
-	.footer__contentAdress{
-		span{
-			margin-bottom: rem(43);
-		}
-	}
-}
+@include media-breakpoint-down(lg) {}
 
 @include media-breakpoint-down(md) {
+	.footer__row {
+		--bs-gutter-y: 70px;
+	}
+	.footer__linksBox{
+		margin-bottom: 20px;
+	}
 	.footer__contentAdress{
 		span{
-			margin-bottom: rem(25);
+			margin-bottom: 18px;
 		}
 	}
-
 }
 
 @include media-breakpoint-down(sm) {}
@@ -60,13 +70,16 @@
 @include media-breakpoint-down(xs) {}
 }
 .footer{
+	&__link{
+		display:block;
+	}
 	&__row{
 		padding-top: 2px;
 		margin-bottom: rem(36);
 	}
 	&__logo{
 		img {
-			padding-bottom: rem(40);
+			margin-bottom: rem(40);
 		}
 	}
 	&__title{
@@ -87,13 +100,13 @@
 		padding-right: rem(10);
 		letter-spacing: 0;
 		span{
-			display:block;
-			margin-bottom: rem(19);
+			display: inline-block;
+			margin-bottom: 17px;
 		}
 	}
 	&__linksBox {
 		letter-spacing: 0;
-		margin-bottom: rem(14);
+		margin-bottom: rem(15);
 		font-size: rem(16);
 		line-height: calc(18/16);
 		a{
@@ -104,9 +117,8 @@
 	&__gray{
 		color: grey;
 		font-size: rem(13);
-		line-height: calc(14/13);
-		padding-bottom: rem(23);
-		padding-top: rem(4);
+		line-height: 1.369230769;
+		padding-bottom: rem(18);
 	}
 	&__copyright{
 		font-size: rem(13);
@@ -117,7 +129,7 @@
 		.menu{
 			list-style: none;
 			.menu-item{
-				font-size: rem(16);
+				font-size:rem(16);
 				line-height: calc(18/16);
 				margin-bottom: rem(10);
 			}
@@ -132,10 +144,6 @@
 			}
 
 		}
-	}
-	&__link{
-		display: block;
-		margin-top: 1px;
 	}
 }
 
