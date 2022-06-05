@@ -6,9 +6,20 @@
 	//@include media-breakpoint-up(sm){
 	//	background-color: green;
 	//}
-	//@include media-breakpoint-up(xl) {
-	//	background-color: red;
-	//}
+	@include media-breakpoint-down(xl) {
+		.footer__row {
+			--bs-gutter-y: 50px;
+		}
+		.footer__linksBox{
+			margin-bottom: 20px;
+		}
+		.footer__contentAdress{
+			span{
+				margin-bottom: 40px;
+			}
+		}
+
+	}
 
 @include media-breakpoint-up(lg) {}
 
@@ -40,26 +51,41 @@
 
 @include media-breakpoint-down(lg) {}
 
-@include media-breakpoint-down(md) {}
+@include media-breakpoint-down(md) {
+	.footer__row {
+		--bs-gutter-y: 70px;
+	}
+	.footer__linksBox{
+		margin-bottom: 20px;
+	}
+	.footer__contentAdress{
+		span{
+			margin-bottom: 18px;
+		}
+	}
+}
 
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
 }
 .footer{
+	&__link{
+		display:block;
+	}
 	&__row{
 		padding-top: 2px;
-		margin-bottom: 36px;
+		margin-bottom: rem(36);
 	}
 	&__logo{
 		img {
-			padding-bottom: 40px;
+			margin-bottom: rem(40);
 		}
 	}
 	&__title{
 		letter-spacing: 0.1em;
-		margin-bottom: 18px;
-		font-size: 16px;
+		margin-bottom: rem(18);
+		font-size: rem(16);
 		line-height: calc(18/16);
 		span{
 			letter-spacing: 0;
@@ -67,11 +93,11 @@
 	}
 	&__mainAdress{
 		letter-spacing: 0;
-		font-size: 16px;
+		font-size: rem(16);
 		line-height: calc(18/16);
 	}
 	&__contentAdress{
-		padding-right: 10px;
+		padding-right: rem(10);
 		letter-spacing: 0;
 		span{
 			display: inline-block;
@@ -80,8 +106,8 @@
 	}
 	&__linksBox {
 		letter-spacing: 0;
-		margin-bottom: 15px;
-		font-size: 16px;
+		margin-bottom: rem(15);
+		font-size: rem(16);
 		line-height: calc(18/16);
 		a{
 			color: black;
@@ -90,13 +116,12 @@
 	}
 	&__gray{
 		color: grey;
-		font-size: 13px;
-		line-height: calc(14/13);
-		padding-bottom: 23px;
-		padding-top: 4px;
+		font-size: rem(13);
+		line-height: 1.369230769;
+		padding-bottom: rem(18);
 	}
 	&__copyright{
-		font-size: 13px;
+		font-size: rem(13);
 		line-height: calc(18/13);
 		color: #7B8386;
 	}
@@ -104,9 +129,9 @@
 		.menu{
 			list-style: none;
 			.menu-item{
-				font-size: 16px;
+				font-size:rem(16);
 				line-height: calc(18/16);
-				margin-bottom: 10px;
+				margin-bottom: rem(10);
 			}
 		}
 	}

@@ -111,15 +111,19 @@
 		transform: translateX(-50%) translateY(-50%) scale(var(--play-scale,1));
 		background-color: var(--background-color-green, transparent) ;
 		border-radius: 50%;
-		border: var(--border-defalt-green ,1px solid white );
+		border: var(--border-defalt-green ,1px solid $white );
 		width: rem(50);
 		height: rem(50);
 		.triangle-play{
 			border-left: 18px solid $white;
 			border-top: 10px solid transparent;
 			border-bottom: 10px solid transparent;
-			margin-left: 17px;
-			margin-top: 13px;
+			//margin-left: 17px;
+			//margin-top: 13px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-40%) translateY(-50%) scale(var(--play-scale,1));
 		}
 	}
 	&__videoTime {
@@ -175,8 +179,8 @@
 	}
 
 	&__btn {
-		@extend .btn;
 		@extend .btn-outline-primary;
+		@extend .btn;
 		font-size: rem(13);
 		line-height: calc(15.6/13);
 		letter-spacing: 0.1em;
@@ -184,13 +188,12 @@
 		width: 100%;
 		background-color: var(--background-color-green , $white);
 		&--vote{
-			color: $black;
 			padding: 11px 44px;
 			display: var(--switch-to-none, inline-block);
-			:hover{
+			color: var(--letter-collor,$black) !important;
+			&:hover{
 				--background-color-green: #{$green};
-				--letter-collor: $white;
-				color: #0a2b1d;
+				--letter-collor:#{$white};
 			}
 		}
 		&--thanks{
@@ -198,7 +201,7 @@
 			padding: 12px 0 ;
 			display:var(--switch-to-inline ,none);
 			color: $black !important;
-			background-color: var(--background-color-green);
+			background-color: var(--background-color-green)!important;
 			cursor: var(--cursor,pointer) !important;
 		}
 	}
@@ -261,16 +264,15 @@
 		align-items: center;
 		justify-content: center;
 		margin-right: 5px;
-		&:last-child{
-			margin-right: 0;
-		}
 		font-size: rem(21);
 		line-height: calc(25/21);
-
-		border: var(--border-default) #CCCCCC;
 		background-color: $white;
+		border-color:var(--green-border , $gray-80);
 		&:hover{
-			border:var(--border-default);
+			--green-border: #{$green};
+		}
+		&:last-child{
+			margin-right: 0;
 		}
 
 		&.current{

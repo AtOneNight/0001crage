@@ -35,7 +35,13 @@
 	@include media-breakpoint-only(xl) {}
 
 	// 
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(xl) {
+		.mailblock{
+			font-size: 1.125rem;
+			transition: font-size 0.01s linear;
+		}
+
+	}
 
 	@include media-breakpoint-down(lg) {}
 
@@ -75,11 +81,18 @@
 	}
 
 	.rightphone {
-		//margin-left: -10px;
 		--bs-gutter-x: #{rem(20)};
 	}
 	.leftphone{
 		--bs-gutter-x: #{rem(20)};
+	}
+}
+.menu-mobile{
+	&__link{
+		display: block;
+		font-size: 30px;
+		line-height: calc(40/30);
+		margin-bottom: 15px;
 	}
 }
 
