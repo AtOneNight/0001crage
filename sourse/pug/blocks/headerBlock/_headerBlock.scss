@@ -1,10 +1,20 @@
-// start .headerBlock
 .headerBlock {
+	@include media-breakpoint-down(xl) {
+		.card1__img-box{
+			img{
+				width: 101%	;
+			}
+		}
+	}
+	@include media-breakpoint-down(sm){
+		.navbtns__txt-btn{
+			display: none;
+		}
+	}
 	&__row{
-		margin-bottom: 54px;
 		--bs-gutter-y: #{rem(30)};
-		--row-bg: $white;
-		background-color: var(--row-bg);
+		margin-bottom: 54px;
+		background-color: $white;
 	}
 	margin-bottom: 1px;
 	min-height: 100vh;
@@ -13,7 +23,7 @@
 	// background-color: #000000;
 	padding-top: 1px;
 	margin-top: 1px;
-	padding-bottom: 150px;
+	padding-bottom: rem(150);
 
 	h1 {
 		margin-bottom: 1px;
@@ -36,12 +46,11 @@
 }
 
 .card1 {
-	--border-default: 1px solid ;
 	&__box {
-		background-color: var(--card-bg, $white);
+		background-color: var(--box-bc, $white);
 		padding: 0;
 		box-shadow: 0 rem(8) rem(16) 0 #5057690D;
-		border-radius: rem(8);
+		border-radius: rem(9);
 	}
 
 	&__video {
@@ -118,8 +127,10 @@
 			border-left: 18px solid $white;
 			border-top: 10px solid transparent;
 			border-bottom: 10px solid transparent;
-			margin-left: 17px;
-			margin-top: 13px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-40%) translateY(-50%) scale(var(--play-scale,1));
 		}
 	}
 	&__videoTime {
@@ -156,7 +167,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-bottom: var(--margin-for-likes,39px);
+		margin-bottom: var(--likes-margin , 39px);
 		padding-left: 21px;
 		.fingerAmount{
 			display: block;
@@ -182,41 +193,37 @@
 		letter-spacing: 0.1em;
 		display: block;
 		width: 100%;
-		background-color: var(--background-color-green , $white);
+		background-color: var(--card-btn-bc  $white);
 		&--vote{
-			color: $black;
+			color:var(--vote-color , $black) !important;
 			padding: 11px 44px;
-			display: var(--switch-to-none, inline-block);
-			:hover{
-				--background-color-green: #{$green};
-				--letter-collor: $white;
-				color: #0a2b1d;
+			display: var(--vote-display, inline-block);
+			&:hover{
+				--card-btn-bc: #{$green};
+				--vote-color: #{$white} !important;
 			}
 		}
 		&--thanks{
 			margin: 0;
 			padding: 12px 0 ;
-			display:var(--switch-to-inline ,none);
+			display:var(--thanks-display ,none);
 			color: $black !important;
-			background-color: var(--background-color-green);
+			background-color: $green;
 			cursor: var(--cursor,pointer) !important;
 		}
 	}
 	&.active {
-		--card-bg: #{$green};
+		--box-bc: #{$green};
 		--image-finger: url("../img/svg/like1.svg");
-		--switch-to-none: none;
-		--switch-to-inline:inline-block;
-		--default: default;
-		--cursor: default;
-		--margin-for-likes: 23px;
-		--margin-for-namevideo:34px;
+		--vote-display: none;
+		--thanks-display:inline-block;
+		--likes-margin: 23px;
+		--margin-for-namevideo:33px;
 
 	}
 }
 .navbtns{
 	align-items: center;
-	--border-default: 1px solid #{$green} ;
 	&__arrowbtn{
 		//box-shadow:0 8px 16px 0, #50576940;
 		border-radius: 50%;
@@ -267,21 +274,19 @@
 		font-size: rem(21);
 		line-height: calc(25/21);
 
-		border: var(--border-default) #CCCCCC;
+		border: 1px solid var(--btn-border, $gray-80);
 		background-color: $white;
 		&:hover{
-			border:var(--border-default);
+			--btn-border: #{$green};
 		}
 
 		&.current{
-			border: var(--border-default);
+			border: 1px solid $green;
 			background-color: $green;
 			color: $white;
 		}
 	}
-	&__{
-
-	}
+	&__{}
 	&__{}
 	&__{}
 }

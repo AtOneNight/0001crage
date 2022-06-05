@@ -1,18 +1,16 @@
 mixin menu-toggle()
 	+b.toggle-menu-mobile--js.d-lg-none
 		span
-		.col-auto 12312312
 mixin mob-mnu()
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 			+e.logo(href='/')
-				img(src="../img/svg/CLAGE-Logo.svg" loading="lazy" alt='html')
-			//+mnu()
-				+TopNavLink("tel:+74957418510","+7(495)741-85-10","phoneblock", '../img/phone1.png')
-				+TopNavLink("tel:+74952900585","+7(495)290-05-85","phoneblock",'../img/phone1.png')
-				+TopNavLink('mailto:info@clage-russia.ru','info@clage-russia.ru',"mailblock",'../img/mail.png')
+				img(src="img/svg/CLAGE-Logo.svg" loading="lazy" alt='html')
+			+e.link(href="+7 (495) 741-85-10") +7 (495) 741-85-10
+			+e.link(href="+7 (495) 290-05-85") +7 (495) 290-05-85
+			+e.link(href="info@clage-russia.ru") info@clage-russia.ru
 
 
 mixin top-nav()
@@ -21,13 +19,13 @@ mixin top-nav()
 			+e.row.row.align-items-center
 				.col
 					+e.logo(href='/')
-						img(src="../img/svg/CLAGE-Logo.svg" loading="lazy" alt='html')
+						img(src="img/svg/CLAGE-Logo.svg" loading="lazy" alt='html')
 				.col-auto.d-none.d-lg-block.leftphone
-					+TopNavLink("+7 (495) 741-85-10","+7 (495) 741-85-10","phoneblock", '../img/svg/phone1.svg')
+					+TopNavLink("+7 (495) 741-85-10","+7 (495) 741-85-10","phoneblock", 'img/svg/phone1.svg')
 				.col-auto.d-none.d-lg-block.rightphone
-					+TopNavLink(" +7 (495) 290-05-85","+7 (495) 290-05-85","phoneblock" ,'../img/svg/phone1.svg')
+					+TopNavLink(" +7 (495) 290-05-85","+7 (495) 290-05-85","phoneblock" ,'img/svg/phone1.svg')
 				.col.text-end.d-none.d-lg-block
-					+TopNavLink('info@clage-russia.ru','info@clage-russia.ru',"mailblock",'../img/svg/mail.svg')
+					+TopNavLink('info@clage-russia.ru','info@clage-russia.ru',"mailblock",'img/svg/mail.svg')
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span
