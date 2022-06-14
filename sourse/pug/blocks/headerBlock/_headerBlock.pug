@@ -8,11 +8,11 @@ mixin headerBlock()
                 +CardBlock1(1,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",13)
                 +CardBlock1(2,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",42)
                 +CardBlock1(3,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",76)
-                +CardBlock1(4,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",88)
-                +CardBlock1(5,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",98)
-                +CardBlock1(6,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",54)
-                +CardBlock1(7,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",27)
-                +CardBlock1(8,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",11)
+                +CardBlock1(4,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",88,"muted")
+                +CardBlock1(5,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",98,"muted")
+                +CardBlock1(6,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",54,"muted")
+                +CardBlock1(7,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",27,"muted")
+                +CardBlock1(8,"Leon Thomas - The Creator Has a Master Plan (Official Audio)",11,"muted")
             +b.navbtns.row.justify-content-between
                 .col-auto
                     +e.txt-btn--prev(href="#")
@@ -25,11 +25,11 @@ mixin headerBlock()
                     +e.btn(href="#") 3
                 .col-auto
                     +e.txt-btn--next(href="#")
-                        span ДАЛЕЕ
+                        span далее
                         +e.arrowbtn--rght
                             img(src="img/svg/arrowRight.svg")
 
-mixin CardBlock1(imgNum,txt,likes)
+mixin CardBlock1(imgNum,txt,likes,btnMute)
     .col-xl-3.col-md-6
         +b.card1
             +e.box
@@ -40,13 +40,13 @@ mixin CardBlock1(imgNum,txt,likes)
                         img(src ="img/svg/watches.svg" )
                         span 45
                     +e.plays
-                        .triangle-play
+                        .triangle-play(href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox=`video${imgNum}`)
                     +e.videoTime
                         span 4:28
                 +e.another
-                    +e.namevideo Leon Thomas - The Creator Has a Master Plan (Official Audio)
+                    +e.namevideo(href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox=`video-name${imgNum}`) Leon Thomas - The Creator Has a Master Plan (Official Audio)
                     +e.likes
                         .finger
                         span.fingerAmount= likes
-                    +e.btn--vote(type="button") ПРОГОЛОСОВАТЬ
+                    +e.btn--vote(class=btnMute type="button") ПРОГОЛОСОВАТЬ
                     +e.btn--thanks(type="button") СПАСИБО ЗА АКТИВНОСТЬ!

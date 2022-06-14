@@ -14,33 +14,15 @@ include ../blocks/footer/_footer.pug
 
 block variables
     - let  mainPage= 'main-page'
-    - let  bg= "01.png"
+    - let  bg= "index.png"
 
 block title
     - let  title= index.head.title
     title= title
 block pagecontent
-    //- +mob-mnu()
-
-
-    //+header()
-    +top-nav()
-    //+topLine
-    //.container
-    +headerBlock
-
-    //+soc()
-    //+sForm()
-    //- +sForm()
-    //- - let list = items[0].title
-    //- p= list
-    //.container
-    //    each item in items
-    //        li
-    //            h2= item.title
-    //            p= item.text
-    //- +sContact()
-
+    +header()
+        +top-nav()
+    +headerBlock()
     +footer()
       
 

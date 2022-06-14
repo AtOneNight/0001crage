@@ -1,6 +1,10 @@
 include include.pug
+
 include js-css.pug
 include ../blocks/modal/_modal.pug
+include ../blocks/footer/_footer
+include ../blocks/header/_header
+include ../blocks/top-nav/_top-nav
 doctype html
 html(lang="ru")
 	head
@@ -41,7 +45,7 @@ html(lang="ru")
 			block pagecontent
 				h3 content
 		
-		//-+modal()
+		+modal()
 
 		+allcjs()
 		

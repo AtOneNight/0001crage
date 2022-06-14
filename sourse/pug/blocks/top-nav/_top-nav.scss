@@ -15,10 +15,9 @@
 .top-nav {
 	padding-top: rem(28);
 
-	.top-nav__logo {
+	&__logo {
 		margin-left: rem(10);
 	}
-
 	.phoneblock {
 		font-size: rem(21);
 
@@ -26,7 +25,10 @@
 			line-height: calc(24 / 21);
 			padding-left: rem(10);
 			letter-spacing: rem(0.16);
-			color: black;
+			color: var(--phone-block-hover-color,$black);
+		}
+		:hover{
+			--phone-block-hover-color: #{$green}
 		}
 	}
 
@@ -37,21 +39,54 @@
 		span {
 			padding-left: rem(10);
 			letter-spacing: rem(0.16);
-			color: black;
+			color: var(--phone-block-hover-color,$black)
+		}
+		:hover{
+			--phone-block-hover-color: #{$green}
 		}
 	}
 
 	.rightphone {
-		//margin-left: -10px;
 		--bs-gutter-x: #{rem(20)};
 	}
 	.leftphone{
 		--bs-gutter-x: #{rem(20)};
 	}
-	.menu-mobile__link{
-		display: block;
-		font-size: 30px;
-		line-height: calc(40/30);
+
+	.mob-menu{
+		&__inner{
+			padding: 20px;
+		}
+		&__link{
+			display: block;
+			font-size: 25px;
+			line-height: calc(40/30);
+			margin-bottom: 10px;
+			span{
+				margin: 0;
+				position: static;
+				display: inline;
+			}
+		}
+		&__logo{
+			img{
+				margin-bottom: 20px;
+			}
+		}
+		.menu{
+			list-style: none;
+		}
+		.menu-item{
+			font-size: 17px;
+			margin-bottom: 10px;
+			a{
+				padding: 0;
+				color: var(--menu-lia , $black);
+			}
+			:hover{
+				--menu-lia: #{$green}
+			}
+		}
 	}
 }
 

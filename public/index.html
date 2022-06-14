@@ -11,51 +11,64 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css?v=0.0.1" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="01.png">
+	<body class="main-page" data-bg="index.png">
 		<div class="main-wrapper">
-			<!--+header()-->
-			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<div class="top-nav__row row align-items-center">
-						<div class="col">
-							<a class="top-nav__logo" href="/"><img src="img/svg/CLAGE-Logo.svg" loading="lazy" alt="html"/>
-							</a>
-						</div>
-						<div class="col-auto d-none d-lg-block leftphone">
-							<a class="h-link phoneblock" href="+7 (495) 741-85-10"><img src="img/svg/phone1.svg"/><span>+7 (495) 741-85-10</span>
-							</a>
-						</div>
-						<div class="col-auto d-none d-lg-block rightphone">
-							<a class="h-link phoneblock" href=" +7 (495) 290-05-85"><img src="img/svg/phone1.svg"/><span>+7 (495) 290-05-85</span>
-							</a>
-						</div>
-						<div class="col text-end d-none d-lg-block">
-							<a class="h-link mailblock" href="info@clage-russia.ru"><img src="img/svg/mail.svg"/><span>info@clage-russia.ru</span>
-							</a>
-						</div>
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-								<div class="menu-mobile menu-mobile--js d-lg-none">
-									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-									</div>
-									<div class="menu-mobile__inner">
-										<a class="menu-mobile__logo" href="/"><img src="img/svg/CLAGE-Logo.svg" loading="lazy" alt="html"/>
-										</a>
-										<a class="menu-mobile__link" href="+7 (495) 741-85-10">+7 (495) 741-85-10
-										</a>
-										<a class="menu-mobile__link" href="+7 (495) 290-05-85">+7 (495) 290-05-85
-										</a>
-										<a class="menu-mobile__link" href="info@clage-russia.ru">info@clage-russia.ru
-										</a>
+			<!-- start header-->
+			<header class="header" id="header">
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="top-nav__row row align-items-center">
+							<div class="col">
+								<a class="top-nav__logo" href="/"><img src="img/svg/CLAGE-Logo.svg" loading="lazy" alt="html"/>
+								</a>
+							</div>
+							<div class="col-auto d-none d-lg-block leftphone">
+								<a class="top-nav__h-link phoneblock" href="tel:+7 (495) 741-85-10"><img src="img/svg/phone1.svg"/><span>+7 (495) 741-85-10</span>
+								</a>
+							</div>
+							<div class="col-auto d-none d-lg-block rightphone">
+								<a class="top-nav__h-link phoneblock" href="tel:+7 (495) 290-05-85"><img src="img/svg/phone1.svg"/><span>+7 (495) 290-05-85</span>
+								</a>
+							</div>
+							<div class="col text-end d-none d-lg-block">
+								<a class="top-nav__h-link mailblock" href="mailto:info@clage-russia.ru"><img src="img/svg/Mail.svg"/><span>info@clage-russia.ru</span>
+								</a>
+							</div>
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+									<div class="mob-menu menu-mobile menu-mobile--js d-lg-none">
+										<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+										</div>
+										<div class="mob-menu__inner">
+											<a class="mob-menu__logo" href="/"><img src="img/svg/CLAGE-Logo.svg" loading="lazy" alt="html"/>
+											</a>
+											<div class="mob-menu__link">
+												<a class="mob-menu__h-link phoneblock" href="tel:+7 (495) 741-85-10"><img src="img/svg/phone1.svg"/><span>+7 (495) 741-85-10</span>
+												</a>
+											</div>
+											<div class="mob-menu__link">
+												<a class="mob-menu__h-link phoneblock" href="tel:+7 (495) 290-05-85"><img src="img/svg/phone1.svg"/><span>+7 (495) 290-05-85</span>
+												</a>
+											</div>
+											<div class="mob-menu__link">
+												<a class="mob-menu__h-link mailblock" href="mailto:info@clage-russia.ru"><img src="img/svg/Mail.svg"/><span>info@clage-russia.ru</span>
+												</a>
+											</div>
+											<ul class="menu">
+												<li class="menu-item"><a href="#">Правила участия в конкурсе</a></li>
+												<li class="menu-item"><a href="#">Data privacy</a></li>
+												<li class="menu-item"><a href="#">Use of cookies</a></li>
+												<li class="menu-item"><a href="#">Imprint</a></li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!--+topLine-->
-			<!--.container-->
+			</header>
+			<!-- end header-->
 			<!-- start headerBlock-->
 			<div class="headerBlock section" id="headerBlock">
 				<div class="container">
@@ -72,14 +85,14 @@
 										<div class="card1__watches"><img src="img/svg/watches.svg"/><span>45</span>
 										</div>
 										<div class="card1__plays">
-											<div class="triangle-play"></div>
+											<div class="triangle-play" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video1"></div>
 										</div>
 										<div class="card1__videoTime"><span>4:28</span>
 										</div>
 									</a>
 									<div class="card1__another">
-										<div class="card1__namevideo">Leon Thomas - The Creator Has a Master Plan (Official Audio)
-										</div>
+										<a class="card1__namevideo" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video-name1">Leon Thomas - The Creator Has a Master Plan (Official Audio)
+										</a>
 										<div class="card1__likes">
 											<div class="finger"></div><span class="fingerAmount">13</span>
 										</div>
@@ -100,14 +113,14 @@
 										<div class="card1__watches"><img src="img/svg/watches.svg"/><span>45</span>
 										</div>
 										<div class="card1__plays">
-											<div class="triangle-play"></div>
+											<div class="triangle-play" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video2"></div>
 										</div>
 										<div class="card1__videoTime"><span>4:28</span>
 										</div>
 									</a>
 									<div class="card1__another">
-										<div class="card1__namevideo">Leon Thomas - The Creator Has a Master Plan (Official Audio)
-										</div>
+										<a class="card1__namevideo" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video-name2">Leon Thomas - The Creator Has a Master Plan (Official Audio)
+										</a>
 										<div class="card1__likes">
 											<div class="finger"></div><span class="fingerAmount">42</span>
 										</div>
@@ -128,14 +141,14 @@
 										<div class="card1__watches"><img src="img/svg/watches.svg"/><span>45</span>
 										</div>
 										<div class="card1__plays">
-											<div class="triangle-play"></div>
+											<div class="triangle-play" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video3"></div>
 										</div>
 										<div class="card1__videoTime"><span>4:28</span>
 										</div>
 									</a>
 									<div class="card1__another">
-										<div class="card1__namevideo">Leon Thomas - The Creator Has a Master Plan (Official Audio)
-										</div>
+										<a class="card1__namevideo" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video-name3">Leon Thomas - The Creator Has a Master Plan (Official Audio)
+										</a>
 										<div class="card1__likes">
 											<div class="finger"></div><span class="fingerAmount">76</span>
 										</div>
@@ -156,18 +169,18 @@
 										<div class="card1__watches"><img src="img/svg/watches.svg"/><span>45</span>
 										</div>
 										<div class="card1__plays">
-											<div class="triangle-play"></div>
+											<div class="triangle-play" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video4"></div>
 										</div>
 										<div class="card1__videoTime"><span>4:28</span>
 										</div>
 									</a>
 									<div class="card1__another">
-										<div class="card1__namevideo">Leon Thomas - The Creator Has a Master Plan (Official Audio)
-										</div>
+										<a class="card1__namevideo" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video-name4">Leon Thomas - The Creator Has a Master Plan (Official Audio)
+										</a>
 										<div class="card1__likes">
 											<div class="finger"></div><span class="fingerAmount">88</span>
 										</div>
-										<button class="card1__btn card1__btn--vote" type="button">ПРОГОЛОСОВАТЬ
+										<button class="card1__btn card1__btn--vote muted" type="button">ПРОГОЛОСОВАТЬ
 										</button>
 										<button class="card1__btn card1__btn--thanks" type="button">СПАСИБО ЗА АКТИВНОСТЬ!
 										</button>
@@ -184,18 +197,18 @@
 										<div class="card1__watches"><img src="img/svg/watches.svg"/><span>45</span>
 										</div>
 										<div class="card1__plays">
-											<div class="triangle-play"></div>
+											<div class="triangle-play" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video5"></div>
 										</div>
 										<div class="card1__videoTime"><span>4:28</span>
 										</div>
 									</a>
 									<div class="card1__another">
-										<div class="card1__namevideo">Leon Thomas - The Creator Has a Master Plan (Official Audio)
-										</div>
+										<a class="card1__namevideo" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video-name5">Leon Thomas - The Creator Has a Master Plan (Official Audio)
+										</a>
 										<div class="card1__likes">
 											<div class="finger"></div><span class="fingerAmount">98</span>
 										</div>
-										<button class="card1__btn card1__btn--vote" type="button">ПРОГОЛОСОВАТЬ
+										<button class="card1__btn card1__btn--vote muted" type="button">ПРОГОЛОСОВАТЬ
 										</button>
 										<button class="card1__btn card1__btn--thanks" type="button">СПАСИБО ЗА АКТИВНОСТЬ!
 										</button>
@@ -212,18 +225,18 @@
 										<div class="card1__watches"><img src="img/svg/watches.svg"/><span>45</span>
 										</div>
 										<div class="card1__plays">
-											<div class="triangle-play"></div>
+											<div class="triangle-play" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video6"></div>
 										</div>
 										<div class="card1__videoTime"><span>4:28</span>
 										</div>
 									</a>
 									<div class="card1__another">
-										<div class="card1__namevideo">Leon Thomas - The Creator Has a Master Plan (Official Audio)
-										</div>
+										<a class="card1__namevideo" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video-name6">Leon Thomas - The Creator Has a Master Plan (Official Audio)
+										</a>
 										<div class="card1__likes">
 											<div class="finger"></div><span class="fingerAmount">54</span>
 										</div>
-										<button class="card1__btn card1__btn--vote" type="button">ПРОГОЛОСОВАТЬ
+										<button class="card1__btn card1__btn--vote muted" type="button">ПРОГОЛОСОВАТЬ
 										</button>
 										<button class="card1__btn card1__btn--thanks" type="button">СПАСИБО ЗА АКТИВНОСТЬ!
 										</button>
@@ -240,18 +253,18 @@
 										<div class="card1__watches"><img src="img/svg/watches.svg"/><span>45</span>
 										</div>
 										<div class="card1__plays">
-											<div class="triangle-play"></div>
+											<div class="triangle-play" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video7"></div>
 										</div>
 										<div class="card1__videoTime"><span>4:28</span>
 										</div>
 									</a>
 									<div class="card1__another">
-										<div class="card1__namevideo">Leon Thomas - The Creator Has a Master Plan (Official Audio)
-										</div>
+										<a class="card1__namevideo" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video-name7">Leon Thomas - The Creator Has a Master Plan (Official Audio)
+										</a>
 										<div class="card1__likes">
 											<div class="finger"></div><span class="fingerAmount">27</span>
 										</div>
-										<button class="card1__btn card1__btn--vote" type="button">ПРОГОЛОСОВАТЬ
+										<button class="card1__btn card1__btn--vote muted" type="button">ПРОГОЛОСОВАТЬ
 										</button>
 										<button class="card1__btn card1__btn--thanks" type="button">СПАСИБО ЗА АКТИВНОСТЬ!
 										</button>
@@ -268,18 +281,18 @@
 										<div class="card1__watches"><img src="img/svg/watches.svg"/><span>45</span>
 										</div>
 										<div class="card1__plays">
-											<div class="triangle-play"></div>
+											<div class="triangle-play" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video8"></div>
 										</div>
 										<div class="card1__videoTime"><span>4:28</span>
 										</div>
 									</a>
 									<div class="card1__another">
-										<div class="card1__namevideo">Leon Thomas - The Creator Has a Master Plan (Official Audio)
-										</div>
+										<a class="card1__namevideo" href="https://www.youtube.com/watch?v=pYt0Nwt_oNI" data-fancybox="video-name8">Leon Thomas - The Creator Has a Master Plan (Official Audio)
+										</a>
 										<div class="card1__likes">
 											<div class="finger"></div><span class="fingerAmount">11</span>
 										</div>
-										<button class="card1__btn card1__btn--vote" type="button">ПРОГОЛОСОВАТЬ
+										<button class="card1__btn card1__btn--vote muted" type="button">ПРОГОЛОСОВАТЬ
 										</button>
 										<button class="card1__btn card1__btn--thanks" type="button">СПАСИБО ЗА АКТИВНОСТЬ!
 										</button>
@@ -304,7 +317,7 @@
 							</a>
 						</div>
 						<div class="col-auto">
-							<a class="navbtns__txt-btn navbtns__txt-btn--next" href="#"><span>ДАЛЕЕ</span>
+							<a class="navbtns__txt-btn navbtns__txt-btn--next" href="#"><span>далее</span>
 								<div class="navbtns__arrowbtn navbtns__arrowbtn--rght"><img src="img/svg/arrowRight.svg"/>
 								</div>
 							</a>
@@ -312,13 +325,6 @@
 					</div>
 				</div>
 			</div>
-			<!--+soc()-->
-			<!--+sForm()-->
-			<!--.container-->
-			<!--    each item in items-->
-			<!--        li-->
-			<!--            h2= item.title-->
-			<!--            p= item.text-->
 			<footer class="footer">
 				<div class="container">
 					<a class="footer__logo" href="/"><img src="../img/svg/CLAGE-Logo.svg" loading="lazy" alt="html"/>
@@ -380,6 +386,50 @@
 					</div>
 				</div>
 			</footer>
+		</div>
+		<div class="modal-win" id="modal1" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="text-center">
+						<div class="form-wrap__title h1">Заголовок
+						</div>
+					</div>
+					<div class="form-wrap__inpurs">
+						<div class="form-wrap__input-wrap"><input class="form-wrap__input form-control" type="text" placeholder="Имя"/>
+						</div>
+						<div class="form-wrap__input-wrap"><input class="form-wrap__input form-control border-danger" type="tel" placeholder="Телефон"/>
+							<div class="form-wrap__message text-danger">Неправильно набран номер
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap"><input class="form-wrap__input form-control" type="email" placeholder="Электронная почта"/>
+						</div>
+						<div class="form-wrap__p-row row align-items-center">
+							<div class="col-auto">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="square"></span>
+								</label>
+							</div>
+							<div class="col">
+								<div class="form-wrap__p-txt">
+									I agree to the
+									<a href="#">terms</a>
+									and conditions and the
+									<a href="#">privacy policy</a>
+								</div>
+							</div>
+						</div>
+						<div class="text-center">
+							<button class="form-wrap__btn btn" type="submit">Подтвердить
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-thanks modal-win bg-success text-white" id="modal-thanks" style="display: none">
+			<div class="modal-thanks__bg"><img loading="lazy" src="img/svg/success.svg" alt=""/>
+			</div>
+			<div class="modal-thanks__txt text-center h1">Полный сакцес!
+			</div>
 		</div>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>

@@ -1,7 +1,7 @@
 "use strict";
 const JSCCommon = { 
 	modalCall() {
-		const link = '[data-fancybox="modal"], .link-modal-js';
+		const link = '.link-modal-js';
 
 		Fancybox.bind(link, {
 			arrows: false,
@@ -26,9 +26,9 @@ const JSCCommon = {
 				Fancybox.close();
 			})
 		})
-		Fancybox.bind('[data-fancybox]', {
-			placeFocusBack: false,
-		});
+		// Fancybox.bind('[data-fancybox]', {
+		// 	placeFocusBack: false,
+		// });
 		const linkModal = document.querySelectorAll(link);
 		function addData() {
 			linkModal.forEach(element => {
@@ -381,6 +381,5 @@ let butlike = document.querySelectorAll(".card1__btn--vote");
 for (let elem of butlike){
 	elem.onclick = function (){
 		elem.closest(".card1").classList.toggle("active")
-		console.log(elem.closest(".card1"))
 	}
 }

@@ -2,16 +2,27 @@ mixin menu-toggle()
 	+b.toggle-menu-mobile--js.d-lg-none
 		span
 mixin mob-mnu()
-	+b.menu-mobile--js.d-lg-none
+	+b.mob-menu.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 			+e.logo(href='/')
 				img(src="img/svg/CLAGE-Logo.svg" loading="lazy" alt='html')
-			+e.link(href="+7 (495) 741-85-10") +7 (495) 741-85-10
-			+e.link(href="+7 (495) 290-05-85") +7 (495) 290-05-85
-			+e.link(href="info@clage-russia.ru") info@clage-russia.ru
-
+			+e.link
+				+TopNavLink("tel:+7 (495) 741-85-10","+7 (495) 741-85-10","phoneblock", 'img/svg/phone1.svg')
+			+e.link
+				+TopNavLink("tel:+7 (495) 290-05-85","+7 (495) 290-05-85","phoneblock" ,'img/svg/phone1.svg')
+			+e.link
+				+TopNavLink('mailto:info@clage-russia.ru','info@clage-russia.ru',"mailblock",'img/svg/Mail.svg')
+			ul.menu
+				li.menu-item
+					a(href="#") Правила участия в конкурсе
+				li.menu-item
+					a(href="#") Data privacy
+				li.menu-item
+					a(href="#") Use of cookies
+				li.menu-item
+					a(href="#") Imprint
 
 mixin top-nav()
 	+b.top-nav.block-with-lazy
@@ -21,16 +32,16 @@ mixin top-nav()
 					+e.logo(href='/')
 						img(src="img/svg/CLAGE-Logo.svg" loading="lazy" alt='html')
 				.col-auto.d-none.d-lg-block.leftphone
-					+TopNavLink("+7 (495) 741-85-10","+7 (495) 741-85-10","phoneblock", 'img/svg/phone1.svg')
+					+TopNavLink("tel:+7 (495) 741-85-10","+7 (495) 741-85-10","phoneblock", 'img/svg/phone1.svg')
 				.col-auto.d-none.d-lg-block.rightphone
-					+TopNavLink(" +7 (495) 290-05-85","+7 (495) 290-05-85","phoneblock" ,'img/svg/phone1.svg')
+					+TopNavLink("tel:+7 (495) 290-05-85","+7 (495) 290-05-85","phoneblock" ,'img/svg/phone1.svg')
 				.col.text-end.d-none.d-lg-block
-					+TopNavLink('info@clage-russia.ru','info@clage-russia.ru',"mailblock",'img/svg/mail.svg')
+					+TopNavLink('mailto:info@clage-russia.ru','info@clage-russia.ru',"mailblock",'img/svg/Mail.svg')
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span
-						+mob-mnu
+						+mob-mnu()
 mixin TopNavLink(link,txt,clas,src)
-	+b.h-link(href=link, class=clas)
+	+e.h-link(href=link, class=clas)
 		img(src=src)
 		span=txt

@@ -13,11 +13,174 @@
 	</head>
 	<body>
 		<div class="main-wrapper">
-			<div class="section container">
-				<h1>Страница для  демонстрации модальных окон</h1>
-				<div class="row">
-										<div class="col-auto mb-2"><a class="btn btn-primary" href="#" data-src="modal-call" data-fancybox="modal">modal-call</a></div>
+			<!-- start header-->
+			<header class="header" id="header">
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="top-nav__row row align-items-center">
+							<div class="col">
+								<a class="top-nav__logo" href="/"><img src="img/svg/CLAGE-Logo.svg" loading="lazy" alt="html"/>
+								</a>
+							</div>
+							<div class="col-auto d-none d-lg-block leftphone">
+								<a class="top-nav__h-link phoneblock" href="tel:+7 (495) 741-85-10"><img src="img/svg/phone1.svg"/><span>+7 (495) 741-85-10</span>
+								</a>
+							</div>
+							<div class="col-auto d-none d-lg-block rightphone">
+								<a class="top-nav__h-link phoneblock" href="tel:+7 (495) 290-05-85"><img src="img/svg/phone1.svg"/><span>+7 (495) 290-05-85</span>
+								</a>
+							</div>
+							<div class="col text-end d-none d-lg-block">
+								<a class="top-nav__h-link mailblock" href="mailto:info@clage-russia.ru"><img src="img/svg/Mail.svg"/><span>info@clage-russia.ru</span>
+								</a>
+							</div>
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+									<div class="mob-menu menu-mobile menu-mobile--js d-lg-none">
+										<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+										</div>
+										<div class="mob-menu__inner">
+											<a class="mob-menu__logo" href="/"><img src="img/svg/CLAGE-Logo.svg" loading="lazy" alt="html"/>
+											</a>
+											<div class="mob-menu__link">
+												<a class="mob-menu__h-link phoneblock" href="tel:+7 (495) 741-85-10"><img src="img/svg/phone1.svg"/><span>+7 (495) 741-85-10</span>
+												</a>
+											</div>
+											<div class="mob-menu__link">
+												<a class="mob-menu__h-link phoneblock" href="tel:+7 (495) 290-05-85"><img src="img/svg/phone1.svg"/><span>+7 (495) 290-05-85</span>
+												</a>
+											</div>
+											<div class="mob-menu__link">
+												<a class="mob-menu__h-link mailblock" href="mailto:info@clage-russia.ru"><img src="img/svg/Mail.svg"/><span>info@clage-russia.ru</span>
+												</a>
+											</div>
+											<ul class="menu">
+												<li class="menu-item"><a href="#">Правила участия в конкурсе</a></li>
+												<li class="menu-item"><a href="#">Data privacy</a></li>
+												<li class="menu-item"><a href="#">Use of cookies</a></li>
+												<li class="menu-item"><a href="#">Imprint</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+			</header>
+			<!-- end header-->
+			<div class="section">
+				<div class="container">
+					<div class="row gy-3 gx-3">
+						<div class="col-auto"><a class="btn btn-primary link-modal-js" href="#modal1">modal1</a></div>
+						<div class="col-auto"><a class="btn btn-primary link-modal-js" href="#modal-thanks">modal thanks</a></div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container">
+					<a class="footer__logo" href="/"><img src="../img/svg/CLAGE-Logo.svg" loading="lazy" alt="html"/>
+					</a>
+					<div class="footer__row row">
+						<div class="footer__mainAdress col-6 col-lg-3">
+							<div class="footer__title">CLAGE <span>GmbH</span>
+							</div>
+							<div class="footer__contentAdress"><span>Pirolweg 1-5, 21337 Lüneburg, Germany</span>
+								<div class="footer__linksBox"><a href="tel:+49413189010">+49 4131 89010</a><a href="mailto:info@clage.de">info@clage.de</a>
+								</div>
+								<a class="footer__link mt-3" href="www.clage.com" target="_blank">www.clage.com
+								</a>
+							</div>
+						</div>
+						<div class="footer__localAdress col-6 col-lg-3">
+							<div class="footer__title mb-0">CLAGE-RUSSIA
+							</div>
+							<div class="footer__contentAdress">
+								<div class="footer__gray">Эксклюзивный поставщик<br/>на территории РФ
+								</div>
+							</div>
+							<div class="footer__linksBox"><a href="tel:+74957418510">+7 (495) 741-85-10</a><a href="tel:+74952900585">+7 (495) 290-05-85</a><a href="mailto:info@clage-russia.ru">info@clage-russia.ru</a>
+							</div>
+							<a class="footer__link" href="clage-russia.ru" target="_blank">clage-russia.ru
+							</a>
+						</div>
+						<div class="footer__socials col-6 col-lg-3">
+							<div class="footer__title">ПРИСОЕДНАЙСЯ
+							</div>
+							<div class="soc">
+								<a class="soc__item" href="#" target="_blank"><img src="img/svg/soc-fb.svg"/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img src="img/svg/soc-vk.svg"/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img src="img/svg/soc-inst.svg"/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img src="img/svg/soc-yt.svg"/>
+								</a>
+							</div>
+						</div>
+						<div class="footer__information col-6 col-lg-3">
+							<div class="footer__title">ИНФОРМАЦИЯ
+							</div>
+							<div class="footer__menuContainer">
+								<ul class="menu">
+									<li class="menu-item"><a href="#">Правила участия в конкурсе</a></li>
+									<li class="menu-item"><a href="#">Data privacy</a></li>
+									<li class="menu-item"><a href="#">Use of cookies</a></li>
+									<li class="menu-item"><a href="#">Imprint</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer__copyright">
+						Copyright ©
+						<span class="set-curr-year-js">2021</span>
+						CLAGE GmbH. All rights reserved.
+					</div>
+				</div>
+			</footer>
+		</div>
+		<div class="modal-win" id="modal1" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="text-center">
+						<div class="form-wrap__title h1">Заголовок
+						</div>
+					</div>
+					<div class="form-wrap__inpurs">
+						<div class="form-wrap__input-wrap"><input class="form-wrap__input form-control" type="text" placeholder="Имя"/>
+						</div>
+						<div class="form-wrap__input-wrap"><input class="form-wrap__input form-control border-danger" type="tel" placeholder="Телефон"/>
+							<div class="form-wrap__message text-danger">Неправильно набран номер
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap"><input class="form-wrap__input form-control" type="email" placeholder="Электронная почта"/>
+						</div>
+						<div class="form-wrap__p-row row align-items-center">
+							<div class="col-auto">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="square"></span>
+								</label>
+							</div>
+							<div class="col">
+								<div class="form-wrap__p-txt">
+									I agree to the
+									<a href="#">terms</a>
+									and conditions and the
+									<a href="#">privacy policy</a>
+								</div>
+							</div>
+						</div>
+						<div class="text-center">
+							<button class="form-wrap__btn btn" type="submit">Подтвердить
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-thanks modal-win bg-success text-white" id="modal-thanks" style="display: none">
+			<div class="modal-thanks__bg"><img loading="lazy" src="img/svg/success.svg" alt=""/>
+			</div>
+			<div class="modal-thanks__txt text-center h1">Полный сакцес!
 			</div>
 		</div>
 		<script src="libs/jquery/jquery.min.js"></script>

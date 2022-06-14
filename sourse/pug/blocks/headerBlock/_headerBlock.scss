@@ -7,9 +7,27 @@
 		}
 	}
 	@include media-breakpoint-down(sm){
-		.navbtns__txt-btn{
-			display: none;
+		.navbtns{
+			.col-auto{
+				padding: 0;
+			}
+			&__arrowbtn{
+				width: 30px;
+				height: 30px;
+			}
+			&__txt-btn{
+				span{
+					display: none;
+				}
 		}
+			&__btn{
+				width: 30px;
+				height: 30px;
+				padding: 2px;
+				font-size: rem(16);
+			}
+		}
+
 	}
 	&__row{
 		--bs-gutter-y: #{rem(30)};
@@ -160,6 +178,8 @@
 		font-size: rem(16);
 		font-weight: 400;
 		margin-bottom:var(--margin-for-namevideo, 19px);
+		color: $black !important;
+		display: block;
 
 	}
 
@@ -179,7 +199,7 @@
 			padding-left: 11px;
 		}
 		.finger{
-			background-image: var(--image-finger, url("../img/svg/like.svg"));
+			background-image: var(--image-finger, url("../img/svg/like2.png"));
 			width: 36px;
 			height: 40px;
 		}
@@ -252,6 +272,7 @@
 		justify-content: center;
 		align-items: center;
 		span{
+			text-transform: uppercase;
 			padding:6px 13px 0 13px;
 			letter-spacing: 0.1em;
 			color: $black;
@@ -261,7 +282,7 @@
 	&__btn{
 		@extend .btn;
 		border-radius: rem(24);
-		min-width: 48px;
+		width: 48px;
 		height: 48px;
 		padding:0 10px;
 		display: inline-flex;
@@ -289,4 +310,9 @@
 	&__{}
 	&__{}
 	&__{}
+}
+.muted{
+	border-color: $gray-80 !important;
+	color: $gray-80 !important;
+	pointer-events: none;
 }
